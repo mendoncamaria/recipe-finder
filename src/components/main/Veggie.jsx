@@ -15,7 +15,7 @@ function Veggie() {
 
     const cachedData = localStorage.getItem("veggies");
 
-    if (cachedData !== 'undefined') {
+    if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
       setReqData(JSON.parse(cachedData));
     } else {
       const res = await fetch(url);

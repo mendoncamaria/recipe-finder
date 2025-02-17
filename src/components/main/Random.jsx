@@ -22,7 +22,7 @@ function Random() {
     const cachedData = localStorage.getItem("popular");
     console.log("🚀 ~ getPopular ~ cachedData:", cachedData)
 
-    if (cachedData !== 'undefined') {
+    if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
       console.log('hre?')
       setPopular(JSON.parse(cachedData));
     } else {
