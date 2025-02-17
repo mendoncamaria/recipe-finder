@@ -22,12 +22,12 @@ function Random() {
     const cachedData = localStorage.getItem("popular");
     console.log("🚀 ~ getPopular ~ cachedData:", cachedData)
 
+    console.log("🚀 ~ getPopular ~ cachedData !== '':", cachedData !== '')
+    console.log("🚀 ~ getPopular ~ cachedData !== 'null':", cachedData !== 'null')
+    console.log("🚀 ~ getPopular ~ cachedData !== null:", cachedData !== null)
+    console.log("🚀 ~ getPopular ~ cachedData !== undefin:", cachedData !== undefined)
+    console.log("🚀 ~ getPopular ~ cachedData !== 'undefined':", cachedData !== 'undefined')
     if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
-      console.log("🚀 ~ getPopular ~ cachedData !== '':", cachedData !== '')
-      console.log("🚀 ~ getPopular ~ cachedData !== 'null':", cachedData !== 'null')
-      console.log("🚀 ~ getPopular ~ cachedData !== null:", cachedData !== null)
-      console.log("🚀 ~ getPopular ~ cachedData !== undefin:", cachedData !== undefin)
-      console.log("🚀 ~ getPopular ~ cachedData !== 'undefined':", cachedData !== 'undefined')
       console.log('hre?')
       setPopular(JSON.parse(cachedData));
     } else {
