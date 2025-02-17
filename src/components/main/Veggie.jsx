@@ -15,9 +15,9 @@ function Veggie() {
 
     const cachedData = localStorage.getItem("veggies");
 
-    if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
-      setReqData(JSON.parse(cachedData));
-    } else {
+    // if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
+    //   setReqData(JSON.parse(cachedData));
+    // } else {
       const res = await fetch(url);
       const data = await res.json();
 
@@ -28,7 +28,7 @@ function Veggie() {
 
       localStorage.setItem("veggies", JSON.stringify(data.recipes));
       setReqData(data.recipes);
-    }
+    // }
 
     setLoading(false);
   };

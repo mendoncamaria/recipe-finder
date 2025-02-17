@@ -27,10 +27,10 @@ function Random() {
     console.log("🚀 ~ getPopular ~ cachedData !== null:", cachedData !== null)
     console.log("🚀 ~ getPopular ~ cachedData !== undefin:", cachedData !== undefined)
     console.log("🚀 ~ getPopular ~ cachedData !== 'undefined':", cachedData !== 'undefined')
-    if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
-      console.log('hre?')
-      setPopular(JSON.parse(cachedData));
-    } else {
+    // if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
+    //   console.log('hre?')
+    //   setPopular(JSON.parse(cachedData));
+    // } else {
       const res = await fetch(url);
       const data = await res.json();
 
@@ -41,7 +41,7 @@ function Random() {
 
       localStorage.setItem("popular", JSON.stringify(data.recipes));
       setPopular(data.recipes);
-    }
+    // }
     setLoading(false);
   };
 
