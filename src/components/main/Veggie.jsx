@@ -52,10 +52,23 @@ function Veggie() {
           <Splide
             options={{
               arrows: false,
-              perPage: 4,
               gap: "1rem",
               pagination: false,
               drag: "free",
+              breakpoints: {
+                640: {
+                  perPage: 1,
+                },
+                768: {
+                  perPage: 2,
+                },
+                1024: {
+                  perPage: 3,
+                },
+                2048: {
+                  perPage: 4,
+                },
+              },
             }}
           >
             {reqData.map((data) => (

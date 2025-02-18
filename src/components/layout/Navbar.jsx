@@ -2,10 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
 const category = [
-  // {
-  //   name: "Home",
-  //   url: "/",
-  // },
   {
     name: "Indian",
     url: "/category/indian",
@@ -38,14 +34,14 @@ function Navbar() {
     <>
       <header className="bg-gray pt-6">
         <section className="container">
-          <div className="flex items-center justify-between gap-4 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-4">
             <Link to="/">
               <h1 className="text-3xl font-bold cursor-pointer">CookRecipes</h1>
             </Link>
 
             <SearchBar />
           </div>
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center gap-2 md:gap-8">
             {category.map((data) => (
               <NavLink key={data.name} to={data.url}>
                 <p className="py-4 border-b-2 border-b-transparent hover:border-b-black cursor-pointer duration-200">
