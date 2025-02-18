@@ -20,13 +20,6 @@ function Random() {
     setLoading(true);
 
     const cachedData = localStorage.getItem("popular");
-    console.log("🚀 ~ getPopular ~ cachedData:", cachedData)
-
-    console.log("🚀 ~ getPopular ~ cachedData !== '':", cachedData !== '')
-    console.log("🚀 ~ getPopular ~ cachedData !== 'null':", cachedData !== 'null')
-    console.log("🚀 ~ getPopular ~ cachedData !== null:", cachedData !== null)
-    console.log("🚀 ~ getPopular ~ cachedData !== undefin:", cachedData !== undefined)
-    console.log("🚀 ~ getPopular ~ cachedData !== 'undefined':", cachedData !== 'undefined')
     // if (cachedData !== 'undefined' || cachedData !== undefined || cachedData !== null || cachedData !== 'null' || cachedData !== '') {
     //   console.log('hre?')
     //   setPopular(JSON.parse(cachedData));
@@ -59,10 +52,23 @@ function Random() {
           <Splide
             options={{
               arrows: false,
-              perPage: 4,
               gap: "1rem",
               pagination: false,
               drag: "free",
+              breakpoints: {
+                640: {
+                  perPage: 1,
+                },
+                768: {
+                  perPage: 2,
+                },
+                1024: {
+                  perPage: 3,
+                },
+                2048: {
+                  perPage: 4,
+                },
+              },
             }}
           >
             {popular.map((data) => (

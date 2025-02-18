@@ -37,7 +37,7 @@ function Category() {
                 {id} foods
               </h1>
 
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {reqData.results.map((data) => (
                   <RecipeCard key={data.id} data={data} />
                 ))}
