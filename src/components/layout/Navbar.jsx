@@ -7,12 +7,12 @@ const category = [
     url: "/category/indian",
   },
   {
-    name: "Italian",
-    url: "/category/italian",
+    name: "Greek",
+    url: "/category/greek",
   },
   {
-    name: "American",
-    url: "/category/american",
+    name: "Korean",
+    url: "/category/korean",
   },
   {
     name: "Thai",
@@ -20,23 +20,23 @@ const category = [
   },
 
   {
-    name: "Spanish",
-    url: "/category/spanish",
+    name: "European",
+    url: "/category/european",
   },
   {
-    name: "Mexican",
-    url: "/category/mexican",
+    name: "Caribbean",
+    url: "/category/caribbean",
   },
 ];
 
 function Navbar() {
   return (
     <>
-      <header className="bg-gray pt-6">
+      <header className="bg-rose-100 pt-6">
         <section className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 py-4">
             <Link to="/">
-              <h1 className="text-3xl font-bold cursor-pointer">CookRecipes</h1>
+              <h1 className="text-3xl font-bold cursor-pointer">Recipe Finder</h1>
             </Link>
 
             <SearchBar />
